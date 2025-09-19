@@ -1,112 +1,49 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>작가 포트폴리오</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정한유 작가 소개</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Noto Sans KR', sans-serif;
-      background-color: #fafafa;
-      color: #333;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    header img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-    }
-    header p {
-      font-size: 1em;
-      color: #555;
-    }
-    .section {
-      margin: 50px 0;
-    }
-    .section h2 {
-      font-size: 1.6em;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #eee;
-      display: inline-block;
-      padding-bottom: 5px;
-    }
-    .gallery-item {
-      background: #fff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      padding: 10px;
-      text-align: center;
-    }
-    .gallery-item img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
-    .gallery-item h3 {
-      margin: 5px 0;
-      font-size: 1.2em;
-    }
-    .gallery-item p {
-      font-size: 0.9em;
-      color: #555;
-    }
-    footer {
-      margin-top: 60px;
-      padding: 20px;
-      text-align: center;
-      background: #333;
-      color: #fff;
-      border-radius: 8px;
-    }
+    body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #f9f9f9; color: #333; }
+    header { background: #333; color: #fff; padding: 20px 0; text-align: center; }
+    header h1 { margin: 0; font-size: 2.2rem; }
+    .container { width: 90%; max-width: 900px; margin: 20px auto; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    .profile { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; }
+    .profile img { width: 200px; border-radius: 10px; }
+    .profile-info { flex: 1; }
+    h2 { border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 20px; }
+    ul { list-style: none; padding: 0; }
+    ul li { margin-bottom: 10px; }
+    footer { text-align: center; padding: 15px; margin-top: 30px; background: #333; color: #fff; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- 작가 소개 -->
-    <header>
-      <img src="https://via.placeholder.com/160" alt="작가 사진">
-      <h1>홍길동</h1>
-      <p>동시대 미술을 기반으로 회화와 설치작업을 진행하는 작가입니다.<br>감각적이고 실험적인 표현을 통해 새로운 미적 경험을 제안합니다.</p>
-    </header>
+  <header>
+    <h1>정한유 작가 소개</h1>
+  </header>
 
-    <!-- 작품 소개 -->
-    <section class="section">
-      <h2>작품 소개</h2>
-      <div class="gallery-item">
-        <img src="https://via.placeholder.com/600x400?text=Main+Artwork" alt="대표작">
-        <h3>대표 작품 제목</h3>
-        <p>2025 / 캔버스에 아크릴 / 120x100cm<br>자연과 인간의 교감을 탐구하는 대표 회화 작품</p>
+  <div class="container">
+    <section class="profile">
+      <img src="artist.jpg" alt="정한유 작가 사진">
+      <div class="profile-info">
+        <h2>프로필</h2>
+        <p><strong>이름:</strong> 정한유</p>
       </div>
     </section>
 
-    <!-- 관련 회사 소개 -->
-    <section class="section">
-      <h2>관련 회사 소개</h2>
-      <p><strong>아트앤컴퍼니(Art & Company)</strong><br>
-        국내외 전시 기획 및 작가 지원을 전문으로 하는 아트 매니지먼트 기업입니다.<br>
-        작품 판매, 전시, 아카이빙, 홍보를 통해 작가들의 창작 활동을 지원합니다.</p>
+    <section>
+      <h2>경력</h2>
+      <ul>
+        <li>~2024 성균관대학교 미술학과(서양화 전공) 졸업</li>
+        <li>2020~2025 공방한유 (가죽공예 공방)</li>
+        <li>2024~현재 주식회사 에코마린</li>
+      </ul>
     </section>
-
-    <footer>
-      © 2025 홍길동 작가 포트폴리오 | 문의: artist@email.com
-    </footer>
   </div>
+
+  <footer>
+    <p>&copy; 2025 정한유</p>
+  </footer>
 </body>
 </html>

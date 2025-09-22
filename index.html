@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>에코마린 X 정한유</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Montserrat:wght@400;700&display=swap');
-
         :root {
-            --primary-color: #005f73;
-            --secondary-color: #0a9396;
-            --accent-color: #94d2bd;
-            --background-color: #f6fefc;
+            --primary-color: #002879;
+            --secondary-color: #21a0cb;
+            --accent-color: #58bfba;
+            --background-color: #e2e8f4;
             --card-background: #ffffff;
             --text-color: #222;
-            --border-color: #d8f3dc;
+            --border-color: #b0e0b2;
+            --esg-color: #55a630;
         }
 
         body {
@@ -73,12 +73,17 @@
 
         .card {
             background-color: #ffffff;
-            border-left: 6px solid var(--secondary-color);
+            border-left: 6px solid var(--border-color);
             padding: 25px 30px;
             margin-bottom: 40px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        /* 새로운 카드 배경 색상 적용 */
+        .card.alt-bg {
+             background-color: #fbffee;
         }
 
         .card:hover {
@@ -131,7 +136,6 @@
             font-weight: 500;
         }
 
-        /* 적용 사례 섹션에 새로운 레이아웃 적용 */
         .case-item {
             display: flex;
             align-items: center;
@@ -174,7 +178,7 @@
 
         /* ESG 섹션 강조 */
         #esg .card {
-            border-left: 6px solid #55a630;
+            border-left: 6px solid var(--esg-color);
             background: #f0fff4;
         }
 
@@ -198,7 +202,7 @@
                         <img src="images/artwork.png" alt="정한유 작가 작품 흔적의 경중 2">
                     </div>
                 </div>
-                <div class="card">
+                <div class="card alt-bg">
                     <h3>작가 작품 캡션</h3>
                     <p><strong>정한유</strong></p>
                     <p>&lt;흔적의 경중 2&gt;</p>
@@ -206,7 +210,7 @@
                     <p>6,000 X 4,000mm 가변설치</p>
                     <p>2025</p>
                 </div>
-                <div class="card">
+                <div class="card alt-bg">
                     <h3>작품 설명</h3>
                     <p>바다에는 사람의 흔적이 남아있다. 사람의 손을 스쳐 버려진 많은 플라스틱 쓰레기가 바다를 표류한다. 폐어구, 칫솔, 라이터, 화장품 병 등이 사람의 편의를 위해 쉽게 만들어져 편하게 버려진다. 그렇게 우리가 사용하던 물건은 그대로 흔적이 되어 바다에 남는다.</p>
                     <p>작품은 모두 버려진 플라스틱으로 이루어져 있다. 폐비닐하우스 비닐, 폐어구, 해변에서 주운 플라스틱 쓰레기까지 전부 버려진 지 시간이 지난 플라스틱이다. 플라스틱은 가볍지만 튼튼하고 질기다. 그래서 오래 남는다. 각각은 가벼운 플라스틱이지만 그것들이 쌓여 이제는 무시할 수 없는 양이 되었다.</p>
@@ -222,10 +226,10 @@
                         <img src="images/artist.png" alt="정한유 작가 프로필 사진">
                     </div>
                 </div>
-                <div class="card">
+                <div class="card alt-bg">
                     <p>정한유는 현대미술과 공예, 그리고 지속가능한 예술에 관심을 가지고 활동하는 작가입니다. 회화 전공을 바탕으로 다양한 매체와 실험적 작업을 이어가며, 예술과 교육, 환경적 가치를 연결하는 창작 활동을 펼치고 있습니다.</p>
                 </div>
-                <div class="card">
+                <div class="card alt-bg">
                     <h3>작가 경력</h3>
                     <ul class="list-style-none">
                         <li>~2024 성균관대학교 미술학과(서양화 전공) 졸업</li>
@@ -237,7 +241,7 @@
 
             <section id="ecomarine">
                 <h2>에코마린</h2>
-                <div class="card">
+                <div class="card alt-bg">
                     <div class="image-gallery">
                         <div class="image-item">
                             <img src="images/company_info.png" alt="에코마린 팀 사진">

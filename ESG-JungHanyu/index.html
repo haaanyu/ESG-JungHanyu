@@ -1,333 +1,63 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>에코마린 X 정한유</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ECO MARINE X 정한유 작가</title>
+    <link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Montserrat:wght@400;700&display=swap');
-
-        :root {
-            --primary-color: #005f73;
-            --secondary-color: #0a9396;
-            --accent-color: #94d2bd;
-            --background-color: #f6fefc;
-            --card-background: #ffffff;
-            --text-color: #222;
-            --border-color: #d8f3dc;
-        }
-
         body {
-            font-family: 'Noto Sans KR', 'Montserrat', sans-serif;
-            line-height: 1.7;
-            color: var(--text-color);
+            font-family: 'Gmarket Sans Medium', sans-serif;
             margin: 0;
-            background-color: var(--background-color);
+            background-color: #f0f0f0;
+        }
+        
+        .image-container {
+            width: 100%;
         }
 
-        .container {
-            max-width: 1100px;
-            margin: 30px auto;
-            background-color: var(--card-background);
-            border-radius: 20px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-            overflow: hidden;
-        }
-
-        header {
-            text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: #ffffff;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-            font-weight: 700;
-            letter-spacing: -1px;
-        }
-
-        .content-section {
-            padding: 60px 50px;
-        }
-
-        h2 {
-            font-size: 2.2em;
-            color: var(--primary-color);
-            position: relative;
-            margin-bottom: 40px;
-            text-align: center;
-            font-weight: 700;
-        }
-
-        h2::after {
-            content: "";
-            width: 60px;
-            height: 4px;
-            background-color: var(--secondary-color);
-            display: block;
-            margin: 15px auto 0;
-            border-radius: 2px;
-        }
-
-        .card {
-            background-color: #f8e3e3;
-            color: #3b1f1f;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;      
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin: 30px 0;
-        }
-
-        .image-item {
-            text-align: center;
-            background-color: #fdfdfd;
-            padding: 12px;
-            border-radius: 12px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .image-item:hover {
-            transform: scale(1.03);
-        }
-
-        .image-item img {
-            max-width: 100%;
-            border-radius: 10px;
-            height: auto;
-        }
-
-        .image-item p {
-            font-size: 0.95em;
-            color: #555;
-            margin-top: 10px;
-        }
-
-        .list-style-none {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        .list-style-none li {
-            background: linear-gradient(90deg, var(--accent-color), transparent);
-            padding: 14px 18px;
-            margin-bottom: 10px;
-            border-radius: 8px;
-            font-weight: 500;
-        }
-
-        /* 적용 사례 섹션에 새로운 레이아웃 적용 */
-        .case-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 60px;
-        }
-
-        .case-item:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        .case-image {
-            flex: 1;
-            padding: 15px;
-        }
-
-        .case-image img {
+        .image-container img {
             width: 100%;
             height: auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin-bottom: 0; /* 이미지 간격 제거 */
         }
 
-        .case-description {
-            flex: 2;
-            padding: 15px;
+        .contact-button-wrapper {
+            width: 100%;
+            text-align: center;
+            background-color: #fff;
+            padding-top: 20px;
+            padding-bottom: 40px;
         }
 
-        .case-description h3 {
-            color: var(--primary-color);
-            margin-top: 0;
-            font-weight: 700;
+        .contact-button {
+            display: inline-block; /* 링크를 블록 요소로 만들어 클릭 영역 확장 */
+        }
+        
+        .contact-button img {
+            width: 100%;
+            height: auto;
+            max-width: 300px; /* 버튼 이미지 최대 크기 지정 */
+            border-radius: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
-        @media (max-width: 768px) {
-            .case-item, .case-item:nth-child(even) {
-                flex-direction: column;
-                margin-bottom: 40px;
-            }
-        }
-
-        /* ESG 섹션 강조 */
-        #esg .card {
-            border-left: 6px solid #55a630;
-            background: #f0fff4;
-        }
-
-        #esg h2 {
-            color: #2d6a4f;
-        }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <h1>에코마린 X 정한유</h1>
-        </header>
+    <div class="image-container">
+        <img src="images/002.jpg" alt="ECO MARINE 기업 소개">
+        <img src="images/003.jpg" alt="제품 적용 사례">
+        <img src="images/004.jpg" alt="작가 작품 및 설명">
+    </div>
 
-        <main class="content-section">
-            <section id="artwork">
-                <h2>작가 작품</h2>
-                <div class="image-gallery">
-                    <div class="image-item">
-                        <img src="images/artwork.png" alt="정한유 작가 작품 흔적의 경중 2">
-                    </div>
-                </div>
-                <div class="card">
-                    <h3>작가 작품 캡션</h3>
-                    <p><strong>정한유</strong></p>
-                    <p>&lt;흔적의 경중 2&gt;</p>
-                    <p>비닐 위에 과슈와 해양쓰레기</p>
-                    <p>6,000 X 4,000mm 가변설치</p>
-                    <p>2025</p>
-                </div>
-                <div class="card">
-                    <h3>작품 설명</h3>
-                    <p>바다에는 사람의 흔적이 남아있다. 사람의 손을 스쳐 버려진 많은 플라스틱 쓰레기가 바다를 표류한다. 폐어구, 칫솔, 라이터, 화장품 병 등이 사람의 편의를 위해 쉽게 만들어져 편하게 버려진다. 그렇게 우리가 사용하던 물건은 그대로 흔적이 되어 바다에 남는다.</p>
-                    <p>작품은 모두 버려진 플라스틱으로 이루어져 있다. 폐비닐하우스 비닐, 폐어구, 해변에서 주운 플라스틱 쓰레기까지 전부 버려진 지 시간이 지난 플라스틱이다. 플라스틱은 가볍지만 튼튼하고 질기다. 그래서 오래 남는다. 각각은 가벼운 플라스틱이지만 그것들이 쌓여 이제는 무시할 수 없는 양이 되었다.</p>
-                    <p>과슈 물감을 오랜 시간 말려 만들어진 형상은 흔들리는 비닐 위에서 가벼운 듯 흩날린다. 하지만 무거운 쓰레기들에 의해 더 이상 가볍게 움직일 수는 없다.</p>
-                    <p>플라스틱에 남은 사람의 흔적, 비닐에 남은 시간의 흔적이 가벼운 듯 무겁게 우리에게 다가온다.</p>
-                </div>
-            </section>
-
-            <section id="artist">
-                <h2>작가 설명</h2>
-                <div class="image-gallery">
-                    <div class="image-item">
-                        <img src="images/artist.png" alt="정한유 작가 프로필 사진">
-                    </div>
-                </div>
-                <div class="card">
-                    <p>정한유는 현대미술과 공예, 그리고 지속가능한 예술에 관심을 가지고 활동하는 작가입니다. 회화 전공을 바탕으로 다양한 매체와 실험적 작업을 이어가며, 예술과 교육, 환경적 가치를 연결하는 창작 활동을 펼치고 있습니다.</p>
-                </div>
-                <div class="card">
-                    <h3>작가 경력</h3>
-                    <ul class="list-style-none">
-                        <li>~2024 성균관대학교 미술학과(서양화 전공) 졸업</li>
-                        <li>2020~2025 공방한유(가죽공예 공방)</li>
-                        <li>2024~현재 주식회사 에코마린</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="ecomarine">
-                <h2>에코마린</h2>
-                <div class="card">
-                    <div class="image-gallery">
-                        <div class="image-item">
-                            <img src="images/company_info.png" alt="에코마린 팀 사진">
-                        </div>
-                    </div>
-                    <p>에코마린은 소재 혁신으로 저탄소 친환경 선박 시장을 선도하며, 중소형 선박의 새로운 패러다임을 열어갑니다.</p>
-                    <ul class="list-style-none">
-                        <li>한국선급 제조사 인증 받은 유일한 HDPE 소재 제조업체</li>
-                        <li>조성 및 친환경 선박 제작법 특허 보유</li>
-                        <li>누적투자 30억원</li>
-                        <li>초격차 1000+(DIPS) 해양부문 선정('24) 스타트업</li>
-                        <li>벤처기업 등록</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="main-product">
-                <h2>주요 제품</h2>
-                <div class="image-gallery">
-                    <div class="image-item">
-                        <img src="images/main_product.png" alt="에코마린 주요 제품 사진">
-                    </div>
-                </div>
-            </section>
-
-            <section id="applications">
-                <h2>당사 제품 적용 사례</h2>
-                <div class="card">
-                    <p>현재 총 17척의 선박이 제작 중 혹은 제작 완료되었습니다.</p>
-
-                    <div class="case-item">
-                        <div class="case-image">
-                            <img src="images/ex-1.png" alt="가능성호">
-                        </div>
-                        <div class="case-description">
-                            <h3>가능성호</h3>
-                            <p>첫 사례이며 현재는 평택항 항만관리선으로 사용 중입니다.</p>
-                        </div>
-                    </div>
-
-                    <div class="case-item">
-                        <div class="case-image">
-                            <img src="images/ex-2.png" alt="구조정 및 고속단정">
-                        </div>
-                        <div class="case-description">
-                            <h3>구조정 및 고속단정</h3>
-                            <p>높은 충격강도와 경량화된 선체로 작전 수행에 적합합니다. 해양경찰과 국방부에서 운용 중입니다.</p>
-                        </div>
-                    </div>
-
-                    <div class="case-item">
-                        <div class="case-image">
-                            <img src="images/ex-3.png" alt="어선">
-                        </div>
-                        <div class="case-description">
-                            <h3>어선</h3>
-                            <p>연료 소모가 적고 유지보수가 간단해 경제성이 뛰어납니다. 또한 제작 과정 중에 유해물질을 배출하지 않습니다. 전남 친환경 HDPE 어선 규제 자유 특허에도 에코마린의 제품이 적용되고 있습니다.</p>
-                        </div>
-                    </div>
-
-                    <div class="case-item">
-                        <div class="case-image">
-                            <img src="images/ex-4.png" alt="해외">
-                        </div>
-                        <div class="case-description">
-                            <h3>해외</h3>
-                            <p>말레이시아 해군으로부터 뛰어난 제품성을 인정받아 당사 제품이 적용된 선박 도입 절차를 진행 중이며 현재 현지 업체와 MOU를 체결하여 시제선을 제작하고 있습니다. 이외 동남아 국가의 해군도 당사 제품이 적용된 선박 도입을 검토하고 있습니다.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="esg">
-                <h2>ESG 실천</h2>
-                <div class="card">
-                    <p>재활용 기반의 원료를 적용한 신제품으로 선박을 제작하여 지역 사회에 기부할 예정입니다. 에코마린은 ESG 경영 실천을 통해 지속가능한 환경을 위해 노력하고 있습니다.</p>
-                    <div class="image-gallery">
-                        <div class="image-item">
-                            <img src="images/ESG-1.png" alt="ESG 실천 사진 1">
-                        </div>
-                        <div class="image-item">
-                            <img src="images/ESG-2.png" alt="ESG 실천 사진 2">
-                        </div>
-                        <div class="image-item">
-                            <img src="images/ESG-3.png" alt="ESG 실천 사진 3">
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
+    <div class="contact-button-wrapper">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScYpHC6Mw_ZGgWHG7Vhapu7ZjMtGgteY5M2lXYad3RuzXCZSA/viewform?usp=header" class="contact-button" target="_blank">
+            <img src="images/005.jpg" alt="구글 폼 입력하고 에코백 받기">
+        </a>
     </div>
 
 </body>
-
 </html>
